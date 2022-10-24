@@ -10,23 +10,34 @@
 <body>
     <header>
         <p class="head">
-            <img src="./images/logo.png" alt="logo" id="logo">
-            <a href="./Formulaire/Connexion/connexion.html" alt="connexion">
-                <img src="./images/icon_compte.png" alt="MonCompte" id="connexion">
+            <img src="images/logo.png" alt="logo" id="logo">
+            <a href="Formulaire/Connexion/connexion.html" alt="connexion">
+                <img src="images/icon_connexion.png" alt="MonCompte" id="connexion">
             </a>
-            <img src="./images/icon menu.png" alt="menu" class="menu-hamburger">
+            <a href="Formulaire/Inscriptions/inscription.html" alt="Inscription">
+                <img src="images/icone_inscription.png" alt="Inscription" id="inscription">
+            </a>
+            <img src="images/icon menu.png" alt="menu" class="menu-hamburger">
         </p>
     </header>
     <nav class="navbar">
         <div class="nav-links">
             <ul>
-                <li class="active"><a href="./accueil.html">ACCUEIL</a></li>
+                <li class="active"><a href="accueil.html">ACCUEIL</a></li>
                 <li><a href="#">RECETTE</a></li>
                 <li><a href="#">THEMES</a></li>
                 <li><a href="#">MENU</a></li>
                 <li><a href="#">FETES</a></li> 
             </ul>
         </div>  
+        <script>
+            const menuHamburger = document.querySelector(".menu-hamburger")
+            const navLinks = document.querySelector(".nav-links")
+     
+            menuHamburger.addEventListener('click', event =>{
+            navLinks.classList.toggle('mobile-menu')
+            })
+        </script>
     </nav>
     <section>
         <div id="centre">
@@ -35,8 +46,8 @@
             </span>
             <div class="menudujour">
                 <!--MENU ENTREE-->
-                <a href="./recette1.html" class="menu">
-                    <div class="menu-background" style="background-image: url(./images/Oeuf.png);">
+                <a href="#" class="menu">
+                    <div class="menu-background" style="background-image: url(images/Oeuf.png);">
                     </div>
                     <div class="autre">
                         <h3>Entrée</h3>
@@ -44,8 +55,8 @@
                     </div>
                 </a>
                 <!--MENU PLAT-->
-                <a href="./recette2.html" class="menu">
-                    <div class="menu-background" style="background-image: url(./images/Boeuf.png);">
+                <a href="#" class="menu">
+                    <div class="menu-background" style="background-image: url(images/Boeuf.png);">
                     </div>
                     <div class="autre">
                         <h3>Plat</h3>
@@ -53,8 +64,8 @@
                     </div>
                 </a>
                 <!--MENU DESSERT-->
-                <a href="./recette3.html" class="menu">
-                    <div class="menu-background" style="background-image: url(./images/cheesecake.png);">
+                <a href="#" class="menu">
+                    <div class="menu-background" style="background-image: url(images/cheesecake.png);">
                     </div>
                     <div class="autre">
                         <h3>Dessert</h3>
@@ -63,7 +74,9 @@
                 </a>
             </div>
             <div class="liste">
-                <h3>Par catégorie</h3>
+                <span>
+                    <h3>Par catégorie</h3>
+                </span>
                 <ul>
                     <li><a href="#">Apéros</a></li>
                     <li><a href="#">Entrées</a></li>
@@ -71,13 +84,24 @@
                     <li><a href="#">Desserts</a></li>
                     <li><a href="#">Coktails</a></li>
                 </ul>
-                <h3>C'est la saison!</h3>
+                <br>
+                <span>
+                    <h3>C'est la saison!</h3>
+                </span>
                 <ul>
                     <li><a href="#">Recettes au fromage</a></li>
-                    <li><a href="#">Recette de patate douce</a></li>
-                    <li><a href="#">Recette de quiches</a></li>
+                    <li><a href="#">Recettes de patate douce</a></li>
+                    <li><a href="#">Recettes de quiches</a></li>
                     <li><a href="#">Recettes d'automne</a></li>
-                    <li><a href="#">Recttes flexitariennes</a></li>
+                    <li><a href="#">Recettes flexitariennes</a></li>
+                </ul>
+            </div>
+            <div class="top">
+                <ul>
+                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
+                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
+                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
+                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
                 </ul>
             </div>
         </div>
@@ -86,9 +110,9 @@
         <p>
             <h4>SUIVEZ-NOUS</h4>
             <ul id="reseaux">
-                <li><a href="#"><img src="./images/icon_fb.png" alt="logo"></a></li>
-                <li><a href="#"><img src="./images/icon_pinterest.png" alt="logo"></a></li>
-                <li><a href="#"><img src="./images/icon_insta.png" alt="logo"></a></li>
+                <li><a href="#"><img src="images/icon_fb.png" alt="logo"></a></li>
+                <li><a href="#"><img src="images/icon_pinterest.png" alt="logo"></a></li>
+                <li><a href="#"><img src="images/icon_insta.png" alt="logo"></a></li>
             </ul>
         </p>
     </footer>
