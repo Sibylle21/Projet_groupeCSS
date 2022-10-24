@@ -10,17 +10,15 @@
 <body>
     <div class="container">
                         <!--FORMULAIRE-->
-        <form>
+        <form method="POST" action="connexion.php">
             <h1>
                 CONNEXION
             </h1>
-            <input type="email" placeholder="Email">
+            <input type="email" name="e-mail" id="e-mail" placeholder="Email">
             <br>
-            <input type="password" placeholder="Mot de passe">
+            <input type="password" name="mdp" id="mdp" placeholder="Mot de passe">
             <br>
-            <a href="/accueil.html">
-                <input type="button" value="Connexion">
-            </a>
+                <input type="submit" value="Connexion">
             <br>
             <a href="#">Mot de passe oublié</a>
         </form>
