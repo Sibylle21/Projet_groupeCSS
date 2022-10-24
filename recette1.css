@@ -90,7 +90,25 @@ header {
     font-weight: 800;
 }
 
+#connexion {
+    width: 30px;/*Redimentionne l'élément en largeur*/
+    height: 30px;/*Redimentionne l'élément en hauteur*/
+    display: block;/*génère une boite d'élément générant des sauts de lignes avant & après dans le flux normal*/
+    right: 10px;/*Mets l'élément à 10pixel de la droite*/
+    top: 10px;/*Mets l'élément à 10pixels du haut*/
+    margin: 15px;/*Ajoute une marge de 15pixels autour de l'élément*/
+    position: absolute;/*L'élément est retiré du flux normal et aucun espace n'est créer pour lui sur la page, position finale déterminé par les valeurs de top, right, bottom, top (par son anêtre le plus proche ou le bloc englobant)*/
+}
 
+#inscription {
+    width: 30px;/*Redimentionne l'élément en largeur*/
+    height: 30px;/*Redimentionne l'élément en hauteur*/
+    display: block;/*génère une boite d'élément générant des sauts de lignes avant & après dans le flux normal*/
+    right: 50px;/*Mets l'élément à 10pixel de la droite*/
+    top: 10px;/*Mets l'élément à 10pixels du haut*/
+    margin: 15px;/*Ajoute une marge de 15pixels autour de l'élément*/
+    position: absolute;/*L'élément est retiré du flux normal et aucun espace n'est créer pour lui sur la page, position finale déterminé par les valeurs de top, right, bottom, top (par son anêtre le plus proche ou le bloc englobant)*/
+}
 
         /*PAGE PRINCIPALE*/
 
@@ -128,7 +146,7 @@ text-align: center;
     text-align: center;
 }
 
-#container{
+#container1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center
