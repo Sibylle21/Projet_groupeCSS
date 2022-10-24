@@ -1,13 +1,3 @@
-@font-face {
-    /*Ajout d'une police d'écriture à la page*/
-        font-family: 'casualregular';
-        src: url('/font/webfontkit-20220705-154549/casual-regular-webfont.woff2') format('woff2'),
-             url('/font/webfontkit-20220705-154549/casual-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-}
-
-
 * {/*Applique à toute la page*/
     padding: 0; /*pas de marge intérieur*/
     margin: 0; /*pas de marge extérieur*/
@@ -192,15 +182,22 @@ span h3 {
 
                     /*LISTES*/
 
-.liste{
+.liste {
+    margin: 25px;
     text-transform: uppercase;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2,1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.liste li {
+    margin: 10px;
+}
 .liste a {
-    color: black
+    text-transform: uppercase;
+    color: black;
 }
         /*BAS DE PAGE*/
 
@@ -244,6 +241,10 @@ footer li:hover {/*action au passage de la souris*/
 
 @media screen and (max-width: 900px) {
 
+
+    /*BARRE DE NAV*/
+
+
     .navbar {
         top: 0;
         left: 0;
@@ -275,4 +276,8 @@ footer li:hover {/*action au passage de la souris*/
         margin: 25px 0;/*n'applique pas de marge sur l'axe vertical et en mets 25pixels sur l'axe horizontale*/
         font-size: 2em;
     }
+
+    /*CENTRE DE LA PAGE*/
+
+
 }
