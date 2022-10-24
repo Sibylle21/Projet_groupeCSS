@@ -12,7 +12,10 @@
         <p class="head">
             <img src="/images/logo.png" alt="logo" id="logo">
             <a href="/Formulaire/Connexion/connexion.html" alt="connexion">
-                <img src="/images/icon_compte.png" alt="MonCompte" id="connexion">
+                <img src="/images/icon_connexion.png" alt="MonCompte" id="connexion">
+            </a>
+            <a href="/Formulaire/Inscriptions/inscription.html" alt="Inscription">
+                <img src="/images/icone_inscription.png" alt="Inscription" id="inscription">
             </a>
             <img src="/images/icon menu.png" alt="menu" class="menu-hamburger">
         </p>
@@ -27,6 +30,14 @@
                 <li><a href="#">FETES</a></li> 
             </ul>
         </div>  
+        <script>
+            const menuHamburger = document.querySelector(".menu-hamburger")
+            const navLinks = document.querySelector(".nav-links")
+     
+            menuHamburger.addEventListener('click', event =>{
+            navLinks.classList.toggle('mobile-menu')
+            })
+        </script>
     </nav>
     <section>
         <div id="centre">
