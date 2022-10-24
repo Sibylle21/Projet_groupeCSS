@@ -355,7 +355,7 @@ footer li:hover {/*action au passage de la souris*/
         padding-top: 100px;
         box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
         height: 100vh;
-        width: 100vh;
+        width: 100%;
         transform: translate(-150%);
         display: flex;
         flex-direction: column;
