@@ -17,28 +17,27 @@
             <a href="Formulaire/Inscriptions/inscription.html" alt="Inscription">
                 <img src="images/icone_inscription.png" alt="Inscription" id="inscription">
             </a>
-            <img src="images/icon menu.png" alt="menu" class="menu-hamburger">
         </p>
     </header>
-    <nav class="navbar">
-        <div class="nav-links">
-            <ul>
-                <li class="active"><a href="accueil.html">ACCUEIL</a></li>
-                <li><a href="#">RECETTE</a></li>
-                <li><a href="#">THEMES</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><a href="#">FETES</a></li> 
-            </ul>
-        </div>  
-        <script>
-            const menuHamburger = document.querySelector(".menu-hamburger")
-            const navLinks = document.querySelector(".nav-links")
-     
-            menuHamburger.addEventListener('click', event =>{
-            navLinks.classList.toggle('mobile-menu')
-            })
-        </script>
-    </nav>
+    <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+            <div class="menu-items">
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#">Recettes</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Thèmes</a></li>
+              <li><a href="#">Fêtes</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
     <section>
         <div id="centre">
             <span>
@@ -97,11 +96,15 @@
                 </ul>
             </div>
             <div class="top">
+                <span>
+                    <h3>Recettes de la semaine</h3>
+                </span>
+                <br>
                 <ul>
                     <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
-                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
-                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
-                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/chiffon-cake-au-sarrasin-4071119/97659016-1-fre-FR/Chiffon-cake-au-sarrasin.jpg">Chiffon cake au sarrasin</a></li>
+                    <li><a href="#"><img src="https://resize-elle.ladmedia.fr/r/150,,forcex/crop/150,192/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/coquillettes-jambon-comte-shiitakes-4071118/97658924-1-fre-FR/Coquillettes-jambon-comte-shiitakes.jpg">Coquillettes, jambon, comté, shiitakés</a></li>
+                    <li><a href="#"><img src="https://resize.elle.fr/portrait_320_webp/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/soupe-sobako-poireau-et-saint-jacques-4071117/97658792-1-fre-FR/Soupe-sobako-poireau-et-saint-jacques.jpg">Soupe sobako poireau et saint-jacques</a></li>
+                    <li><a href="#"><img src="https://resize.elle.fr/portrait_320_webp/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/endives-au-jambon-bechamel-de-sarrasin-4071116/97658701-1-fre-FR/Endives-au-jambon-bechamel-de-sarrasin.jpg">Endives au jambon, béchamel de sarrasin</a></li>
                 </ul>
             </div>
         </div>

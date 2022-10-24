@@ -51,44 +51,68 @@ header {
     position: absolute;/*L'élément est retiré du flux normal et aucun espace n'est créer pour lui sur la page, position finale déterminé par les valeurs de top, right, bottom, top (par son anêtre le plus proche ou le bloc englobant)*/
 }
 
-.menu-hamburger {
-    display: none;
-    width: 35px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    margin: 15px;
-}
 
         /*NAVBAR*/
 
+.checkbox {
+    display: none;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+          
 .navbar {
-    padding: 3px;/*marge intérieur navbar de 3px sur tout le tour des éléments*/
-    font-weight: bold;/*Poid de l'écriture en gras*/
-    position: relative;/*positionne dans le flux normal du document puis en décalé cependant le décalage n'a pas d'impact sur la position des éléments*/
+    width: 100%;
 }
+          
+          .nav-container {
+            display: flex;
+            align-items: center;
+            height: 62px;
+          }
+          
+          .navbar .menu-items {
+            display: flex;
+            justify-content: center;
+          }
+          
+          .navbar .nav-container li {
+            list-style: none;
+            margin: 0 25px;/*n'applique pas de marge sur l'axe vertical et en mets 25pixels sur l'axe horizontale*/
+          }
+          
+          .navbar .nav-container a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+          }
+          
+          .navbar .nav-container a:hover{
+              font-weight: bolder;
+          }
+          
+          .nav-container {
+            display: block;
+            position: relative;
+            height: 60px;
+          }
 
-.navbar a {
+.menu-items a {
+    text-decoration: none;/*retire le soulignement des liens*/
     color: white;
+    transition: color .3s ease-in-out;
 }
 
-
-.navbar ul {
-    display: flex;/*Mets en place l'utilisation de flexbox*/
-    justify-content: center;/*Centre l'élément au milieu de la page*/
-}
-
-
-.navbar ul li {
-    margin: 0 25px;/*n'applique pas de marge sur l'axe vertical et en mets 25pixels sur l'axe horizontale*/
-}
-
-
-.navbar ul li.active a {
-    color: brown;
-    font-weight: 800;
-}
-
+.menu-items a:hover {
+    color: #572d06;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+  }
 
 
 
@@ -104,7 +128,7 @@ section {
 
 #centre {
     background-color: rgba(255, 255, 255, .5);/*Couleur arrière plan avec niveau de transparence*/
-    height: auto;
+    height: 95vh;
     width: 80%;
     margin: 30px 70px 30px 70px;/*marges extérieurs haut, droite, bas, gauche de l'élément*/
     padding: 20px;/*marges intérieur de l'élément*/
@@ -198,6 +222,38 @@ span h3 {
 .liste a {
     text-transform: uppercase;
     color: black;
+    text-decoration: none;/*retire le soulignement des liens*/
+}
+
+.liste a:hover {
+    font-weight: 700;
+}
+
+        /*TOP RECETTE*/
+
+.top ul{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top li a {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;/*retire le soulignement des liens*/
+    color: grey;
+}
+
+.top img {
+    align-self: center;
+    height: 192px;
+    width: 150px;
 }
         /*BAS DE PAGE*/
 
@@ -244,40 +300,94 @@ footer li:hover {/*action au passage de la souris*/
 
     /*BARRE DE NAV*/
 
-
-    .navbar {
-        top: 0;
-        left: 0;
-        padding: 0;
+    
+    
+      
+      .nav-container .checkbox {
         position: absolute;
-        background: linear-gradient(to top, #d1913c, #ffd194);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
-    }
-
-    .head .menu-hamburger{
         display: block;
-        margin-left: 0;
-    }
-
-
-    .navbar ul {
+        height: 32px;
+        width: 32px;
+        top: -140px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      .nav-container .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: -140px;
+        left: 20px;
+        z-index: 2;
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar ul li {
-        margin: 25px 0;/*n'applique pas de marge sur l'axe vertical et en mets 25pixels sur l'axe horizontale*/
-        font-size: 2em;
-    }
-
-    /*CENTRE DE LA PAGE*/
-
+        justify-content: space-between;
+      }
+      
+      .nav-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+      }
+      
+      .nav-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .nav-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .nav-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .navbar .menu-items {
+        background: linear-gradient(to top, #d1913c, #ffd194);/*applique un gradient sur tout le fond de la page*/
+        padding-top: 100px;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+        height: 100vh;
+        width: 100vh;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+      }
+      
+      .navbar .menu-items li {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      
+      
+      .nav-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+      }
+      
 
 }
